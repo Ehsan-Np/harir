@@ -10,6 +10,8 @@ namespace Zarincode\Harir;
 defined( 'ABSPATH' ) || exit;
 
 use Zarincode\Harir\Roles\Roles;
+use Zarincode\Harir\Roles\RoleSwitch;
+use Zarincode\Harir\Auth\AuthManager;
 use Zarincode\Harir\Woo\Compatibility as Woo_Compatibility;
 use Zarincode\Harir\Wholesale\PriceEngine;
 use Zarincode\Harir\Wholesale\QuantityRules;
@@ -77,6 +79,8 @@ final class Plugin {
 		// ماژول‌های همیشه فعال.
 		$this->module( 'roles', Roles::class );
 		$this->module( 'sms', SmsManager::class );
+		$this->module( 'auth', AuthManager::class );
+		$this->module( 'role_switch', RoleSwitch::class );
 
 		// بررسی ارتقای ساختار دیتابیس.
 		if ( is_admin() ) {
