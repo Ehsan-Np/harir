@@ -13,6 +13,8 @@ use Zarincode\Harir\Roles\Roles;
 use Zarincode\Harir\Woo\Compatibility as Woo_Compatibility;
 use Zarincode\Harir\Wholesale\PriceEngine;
 use Zarincode\Harir\Wholesale\QuantityRules;
+use Zarincode\Harir\Sms\SmsManager;
+use Zarincode\Harir\Db\Migrations;
 
 /**
  * کلاس اصلی افزونه — Singleton.
@@ -74,6 +76,12 @@ final class Plugin {
 
 		// ماژول‌های همیشه فعال.
 		$this->module( 'roles', Roles::class );
+		$this->module( 'sms', SmsManager::class );
+
+		// بررسی ارتقای ساختار دیتابیس.
+		if ( is_admin() ) {
+			add_action( 'admin_init', [ Migrations::class, 'maybe_upgrade' ] );
+		}
 
 		// ماژول‌های وابسته به ووکامرس.
 		add_action(
