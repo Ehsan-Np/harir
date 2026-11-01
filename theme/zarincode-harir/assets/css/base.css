@@ -1,0 +1,40 @@
+/**
+ * حریر رویا — پایه — reset، تایپوگرافی، ظرف، دکمه‌ها و فیلدها
+ *
+ * پورت‌شده از منبع اصلی طرح (design.css + secondary.css + complete.css)
+ * با حفظ ۱:۱ سلکتورها تا خروجی دقیقاً مطابق HTML مرجع باشد.
+ *
+ * @package Zarincode_Harir
+ */
+
+@font-face {
+	font-family:Arad;src:url('../fonts/Arad-VF.ttf') format('truetype');font-style:normal;font-weight:100 800;font-display:swap
+}
+
+@font-face {
+	font-family:Ario;src:url('../fonts/Ario-Dots1.ttf') format('truetype');font-style:normal;font-weight:400;font-display:swap
+}
+
+* { box-sizing:border-box }
+
+html,body { margin:0;padding:0 }
+
+body { font-family:Ario, sans-serif;direction:rtl;background:var(--bg);color:var(--ink);font-size:14px;line-height:1.8;-webkit-font-smoothing:antialiased }
+
+button { font:inherit;cursor:default;border:0 }
+
+h1,h2,h3,h4,p { margin:0 }
+
+img { display:block;width:100%;height:100%;object-fit:cover }
+
+svg { flex:none }
+
+*,*::before,*::after { letter-spacing:normal!important;word-spacing:normal }
+
+*,*::before,*::after { letter-spacing:normal!important;word-spacing:normal }
+
+
+@media(max-width:650px) {
+	body { font-size:13px }
+	body { position:relative }
+}

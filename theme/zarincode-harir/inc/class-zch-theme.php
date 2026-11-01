@@ -44,8 +44,9 @@ final class ZCH_Theme {
 		$modules = [
 			'setup',
 			'enqueue',
+			'icons-data',
 			'icons',
-			'jalali',
+			'class-zch-nav-walker',
 			'template-functions',
 			'template-tags',
 			'performance',

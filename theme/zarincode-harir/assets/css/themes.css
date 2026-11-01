@@ -1,0 +1,39 @@
+/**
+ * حریر رویا — پوسته‌های رنگی جایگزین (royal / organic)
+ *
+ * پورت‌شده از منبع اصلی طرح (design.css + secondary.css + complete.css)
+ * با حفظ ۱:۱ سلکتورها تا خروجی دقیقاً مطابق HTML مرجع باشد.
+ *
+ * @package Zarincode_Harir
+ */
+
+.royal { --bg:#f6f6f3;--paper:#fff;--ink:#202b3a;--muted:#5d6873;--line:#e3e4e4;--accent:#1c2d42;--accent-2:#c3a276;--cta:#c5a472;--cta-ink:#182433;--soft:#e9ebec;--soft2:#dce1e3;--footer:#182535;--footer-top:#233345;--footer-line:#405162;--footsoft:#d4dce2;--newsletter:#3a4960;--whbg:#243548;--whink:#fff;--gold:#d3b587 }
+
+.organic { --bg:#f9f7f0;--paper:#fffefa;--ink:#333b2e;--muted:#626c5d;--line:#e7e6dd;--accent:#526349;--accent-2:#a5b49b;--cta:#855844;--cta-ink:#fff;--soft:#e9ede2;--soft2:#d9e2d3;--footer:#344034;--footer-top:#435143;--footer-line:#5f705e;--footsoft:#d4dfd1;--newsletter:#647760;--whbg:#e1e8dc;--whink:#344131;--gold:#c08b6c }
+
+.royal .btn.outline { border-color:#e4d4b7;color:#fff }
+
+.royal .add { background:#c5a472;color:#1c2d42 }
+
+.royal .section-label { color:#7c623b }
+
+.organic .wholesale { direction:ltr;border-radius:7px;background:#dfe8d9 }
+
+.organic .section-label { color:#7c6551 }
+
+.royal .sidepanel { background:#203044;color:#fff;border-color:#203044 }
+
+.royal .side-user { border-color:#526070 }
+
+.royal .side-help { background:#2b3d51;border-color:#526070;color:#f0d5ae }
+
+.royal .side-help small { color:#d7dde3 }
+
+.organic .sidepanel { background:#edf0e8;border-color:#dfe5d9 }
+
+.organic .story-img { border-radius:10px 70px 10px 10px }
+
+
+@media(max-width:650px) {
+	.organic .story-img { border-radius:10px 40px 10px 10px }
+}

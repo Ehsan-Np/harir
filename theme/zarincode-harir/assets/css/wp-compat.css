@@ -1,0 +1,535 @@
+/**
+ * حریر رویا — لایهٔ سازگاری با وردپرس
+ *
+ * این فایل عمداً **آخر از همه** بارگذاری می‌شود.
+ *
+ * CSS اصلی طرح برای یک سایت HTML ایستا نوشته شده بود و چند قاعدهٔ سراسری دارد
+ * که در محیط وردپرس مخرب است. به‌جای دست‌بردن در فایل‌های پورت‌شده (که باید
+ * ۱:۱ با طرح مرجع بمانند)، آن قواعد را اینجا مهار می‌کنیم.
+ *
+ * همچنین کلاس‌های پیش‌فرض وردپرس که Theme-Check و Envato الزامی می‌دانند
+ * در همین فایل آمده‌اند.
+ *
+ * @package Zarincode_Harir
+ */
+
+/* ==========================================================================
+   ۱. مهار قواعد سراسری مخرب
+   ========================================================================== */
+
+/**
+ * طرح اصلی: img{display:block;width:100%;height:100%;object-fit:cover}
+ * در وردپرس این قاعده لوگو، آواتار، بندانگشتنی‌های ووکامرس، ایموجی و
+ * تصویرهای داخل محتوا را می‌شکند. پس آن را به ظرف‌های تصویری خودِ طرح
+ * محدود می‌کنیم و بقیه را به حالت طبیعی برمی‌گردانیم.
+ */
+img {
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	object-fit: fill;
+}
+
+/* ظرف‌های تصویری طرح که واقعاً به پوشش کامل نیاز دارند. */
+.hero-photo img,
+.cat-image img,
+.product-image img,
+.pd-gallery img,
+.pd-thumb img,
+.wh-photo img,
+.photo-frame img,
+.wish img,
+.basket-item img,
+.featured-card img,
+.article-cover img,
+.read-next img,
+.journal-body img,
+.cat-cover img,
+.value-card img,
+.partner-strip img,
+.detail-copy figure img,
+.article-body figure img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* تصویرهای داخل محتوای ویرایش‌شده نباید کش بیایند. */
+.entry-content img,
+.comment-content img,
+.widget img,
+.wp-block-image img,
+.elementor-widget-image img {
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	object-fit: contain;
+}
+
+/* لوگو و آیکون‌ها. */
+.custom-logo,
+.site-logo img,
+.avatar,
+.wp-smiley,
+.emoji {
+	width: auto;
+	height: auto;
+	object-fit: contain;
+	display: inline-block;
+}
+
+/**
+ * طرح اصلی: button{cursor:default}
+ * از نظر دسترس‌پذیری نادرست است و در فرم‌های واقعی وردپرس گیج‌کننده.
+ */
+button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+.wp-element-button,
+.woocommerce button.button,
+.woocommerce a.button,
+.zch-btn {
+	cursor: pointer;
+}
+
+button[disabled],
+input[disabled],
+.wp-element-button.disabled,
+.woocommerce button.button.disabled {
+	cursor: not-allowed;
+	opacity: 0.55;
+}
+
+/**
+ * طرح اصلی: h1,h2,h3,h4,p{margin:0}
+ * برای چیدمان دستی طرح درست است، ولی محتوای تولیدشده در ویرایشگر
+ * (.entry-content) بدون فاصله غیرقابل خواندن می‌شود.
+ */
+.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6,
+.comment-content h2,
+.comment-content h3,
+.elementor-widget-theme-post-content .elementor-widget-container h2,
+.zch-rich h2,
+.zch-rich h3,
+.detail-copy h2,
+.article-body h2,
+.journal-body h2,
+.policy-part h2 {
+	margin-top: 1.6em;
+	margin-bottom: 0.5em;
+}
+
+.entry-content h2:first-child,
+.entry-content h3:first-child,
+.detail-copy h2:first-child,
+.article-body h2:first-child,
+.policy-part h2:first-child {
+	margin-top: 0;
+}
+
+.entry-content p,
+.comment-content p,
+.detail-copy p,
+.article-body p,
+.journal-body p,
+.policy-part p,
+.faq-row p {
+	margin-bottom: 0.9em;
+}
+
+.entry-content p:last-child,
+.detail-copy p:last-child,
+.article-body p:last-child,
+.policy-part p:last-child {
+	margin-bottom: 0;
+}
+
+.entry-content ul,
+.entry-content ol,
+.article-body ul,
+.policy-part ul {
+	margin: 0.8em 0 1em;
+	padding-inline-start: 1.4em;
+}
+
+.entry-content li + li {
+	margin-top: 0.35em;
+}
+
+/* ==========================================================================
+   ۲. کلاس‌های پیش‌فرض وردپرس (الزام Theme-Check و Envato)
+   ========================================================================== */
+
+.alignleft {
+	float: left;
+	margin-right: 1.5em;
+	margin-bottom: 1em;
+}
+
+.alignright {
+	float: right;
+	margin-left: 1.5em;
+	margin-bottom: 1em;
+}
+
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	clear: both;
+}
+
+.alignwide {
+	max-width: 1200px;
+	margin-inline: auto;
+}
+
+.alignfull {
+	max-width: 100vw;
+	margin-inline: calc(50% - 50vw);
+}
+
+.wp-caption {
+	max-width: 100%;
+	margin-bottom: 1.4em;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin: 0 auto;
+}
+
+.wp-caption-text,
+.gallery-caption {
+	font-size: 11px;
+	color: var(--zch-muted);
+	text-align: center;
+	margin-top: 6px;
+	line-height: 1.7;
+}
+
+.sticky {
+	display: block;
+}
+
+.bypostauthor {
+	display: block;
+}
+
+/* متن فقط برای صفحه‌خوان‌ها — برای skip link و برچسب‌های پنهان. */
+.screen-reader-text {
+	position: absolute !important;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	clip-path: inset(50%);
+	white-space: nowrap;
+	border: 0;
+}
+
+.screen-reader-text:focus {
+	position: fixed !important;
+	top: 8px;
+	right: 8px;
+	width: auto;
+	height: auto;
+	padding: 12px 18px;
+	margin: 0;
+	overflow: visible;
+	clip: auto !important;
+	clip-path: none;
+	white-space: normal;
+	background: var(--zch-paper);
+	color: var(--zch-ink);
+	border: 1px solid var(--zch-accent);
+	border-radius: var(--zch-radius);
+	box-shadow: var(--zch-shadow-lg);
+	font-size: 13px;
+	font-weight: 700;
+	z-index: 100000;
+}
+
+/* ==========================================================================
+   ۳. پرش به محتوا (دسترس‌پذیری)
+   ========================================================================== */
+
+.zch-skip-link {
+	position: absolute;
+	top: -100px;
+	right: 16px;
+	z-index: 100001;
+	background: var(--zch-accent);
+	color: #fff;
+	padding: 12px 20px;
+	border-radius: 0 0 8px 8px;
+	font-size: 13px;
+	font-weight: 700;
+	text-decoration: none;
+	transition: top var(--zch-transition);
+}
+
+.zch-skip-link:focus {
+	top: 0;
+	color: #fff;
+}
+
+/* ==========================================================================
+   ۴. سازگاری با ووکامرس
+   ========================================================================== */
+
+/* پیام‌های ووکامرس با زبان بصری طرح. */
+.woocommerce-message,
+.woocommerce-info,
+.woocommerce-error,
+.woocommerce-notices-wrapper .wc-block-components-notice-banner {
+	background: var(--zch-soft);
+	border: 1px solid var(--zch-line);
+	border-inline-start: 4px solid var(--zch-accent);
+	border-radius: var(--zch-radius);
+	color: var(--zch-ink);
+	padding: 14px 18px;
+	margin-bottom: 18px;
+	font-size: 12px;
+	line-height: 1.9;
+	list-style: none;
+}
+
+.woocommerce-error {
+	border-inline-start-color: #b3453c;
+	background: #fbeeed;
+}
+
+.woocommerce-message {
+	border-inline-start-color: #3f7a54;
+	background: #edf5f0;
+}
+
+.woocommerce-message::before,
+.woocommerce-info::before,
+.woocommerce-error::before {
+	display: none;
+}
+
+/* قیمت‌ها — شامل markup سه‌قیمتی هسته. */
+.woocommerce div.product p.price,
+.woocommerce div.product span.price,
+.woocommerce ul.products li.product .price {
+	color: var(--zch-ink);
+	font-size: 15px;
+	font-weight: 700;
+}
+
+.zch-price {
+	display: inline-flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	gap: 8px;
+}
+
+.zch-price del,
+.zch-price-regular {
+	color: var(--zch-muted);
+	font-size: 11px;
+	font-weight: 500;
+	opacity: 0.85;
+}
+
+.zch-price ins,
+.zch-price-wholesale {
+	text-decoration: none;
+	color: var(--zch-accent);
+	font-size: 16px;
+	font-weight: 700;
+}
+
+.zch-price-badge {
+	background: var(--zch-gold);
+	color: #fff;
+	border-radius: 5px;
+	padding: 3px 8px;
+	font-size: 10px;
+	font-weight: 700;
+	line-height: 1.6;
+	white-space: nowrap;
+}
+
+.zch-price-note {
+	flex-basis: 100%;
+	margin: 6px 0 0;
+	font-size: 11px;
+	color: var(--zch-muted);
+	line-height: 1.9;
+	background: var(--zch-wholesale-bg);
+	border-radius: var(--zch-radius);
+	padding: 9px 12px;
+}
+
+/* ورودی تعداد نقش‌آگاه. */
+.zch-qty-input,
+.woocommerce .quantity input.qty {
+	width: 68px;
+	height: 36px;
+	text-align: center;
+	border: 1px solid var(--zch-line);
+	border-radius: 7px;
+	font-size: 12px;
+	font-weight: 700;
+	color: var(--zch-ink);
+	background: var(--zch-paper);
+	appearance: textfield;
+}
+
+.zch-qty-input::-webkit-outer-spin-button,
+.zch-qty-input::-webkit-inner-spin-button {
+	appearance: none;
+	margin: 0;
+}
+
+.zch-qty-stepper {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+}
+
+.zch-qty-stepper button {
+	width: 34px;
+	height: 36px;
+	border: 1px solid var(--zch-line);
+	border-radius: 7px;
+	background: var(--zch-paper);
+	color: var(--zch-accent);
+	font-size: 15px;
+	font-weight: 700;
+	line-height: 1;
+	display: grid;
+	place-items: center;
+}
+
+.zch-qty-stepper button:disabled {
+	color: var(--zch-muted);
+	opacity: 0.4;
+}
+
+.zch-qty-hint {
+	font-size: 10px;
+	color: var(--zch-muted);
+	margin-top: 5px;
+}
+
+/* جدول و فرم‌های ووکامرس با ظاهر طرح. */
+.woocommerce table.shop_table {
+	border-collapse: collapse;
+	width: 100%;
+	border: 1px solid var(--zch-line);
+	border-radius: var(--zch-radius);
+	overflow: hidden;
+	font-size: 12px;
+}
+
+.woocommerce table.shop_table th,
+.woocommerce table.shop_table td {
+	padding: 12px 14px;
+	border-bottom: 1px solid var(--zch-line);
+	text-align: right;
+}
+
+.woocommerce table.shop_table thead th {
+	background: var(--zch-soft);
+	font-size: 11px;
+	font-weight: 700;
+	color: var(--zch-muted);
+}
+
+.woocommerce form .form-row label,
+.woocommerce form .form-row .select2-container {
+	font-size: 12px;
+	color: var(--zch-ink);
+}
+
+.woocommerce form .form-row input.input-text,
+.woocommerce form .form-row textarea,
+.woocommerce form .form-row select,
+.woocommerce form .form-row .select2-selection {
+	border: 1px solid var(--zch-line);
+	border-radius: 8px;
+	padding: 10px 12px;
+	font-size: 12px;
+	background: var(--zch-paper);
+	color: var(--zch-ink);
+	width: 100%;
+	min-height: 42px;
+}
+
+.woocommerce form .form-row input.input-text:focus,
+.woocommerce form .form-row textarea:focus,
+.woocommerce form .form-row select:focus {
+	border-color: var(--zch-accent);
+	outline: 2px solid var(--zch-accent-2);
+	outline-offset: 1px;
+}
+
+.woocommerce form .form-row .required {
+	color: #b3453c;
+	text-decoration: none;
+}
+
+/* ==========================================================================
+   ۵. سازگاری با المنتور
+   ========================================================================== */
+
+/* المنتور عرض ظرف را خودش مدیریت می‌کند؛ ظرف طرح نباید با آن بجنگد. */
+.elementor-section .container,
+.elementor-element .container {
+	width: 100%;
+	max-width: var(--zch-container-max);
+}
+
+/* ویجت‌های ما نباید تحت تأثیر reset سراسری المنتور قرار بگیرند. */
+.elementor-widget-zch-price .zch-price ins {
+	text-decoration: none;
+}
+
+/* وقتی المنتور فعال است، body هنوز کلاس dream دارد تا توکن‌ها در دسترس باشند. */
+.elementor-editor-active body.dream,
+.elementor-editor-preview body.dream {
+	background: var(--zch-bg);
+}
+
+/* ==========================================================================
+   ۶. حالت چاپ
+   ========================================================================== */
+
+@media print {
+	.topline,
+	.header,
+	.footer,
+	.mobile-bar,
+	.to-top,
+	.zch-skip-link,
+	.woocommerce-tabs,
+	.zch-wholesale-cta {
+		display: none !important;
+	}
+
+	body.dream {
+		background: #fff;
+		color: #000;
+		font-size: 12pt;
+	}
+
+	a[href^="http"]::after {
+		content: " (" attr(href) ")";
+		font-size: 9pt;
+		color: #555;
+	}
+}

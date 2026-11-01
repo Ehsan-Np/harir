@@ -1,0 +1,159 @@
+/**
+ * حریر رویا — فوتر — ستون‌ها، خبرنامه، شبکه‌ها، نمادها و بازگشت به بالا
+ *
+ * پورت‌شده از منبع اصلی طرح (design.css + secondary.css + complete.css)
+ * با حفظ ۱:۱ سلکتورها تا خروجی دقیقاً مطابق HTML مرجع باشد.
+ *
+ * @package Zarincode_Harir
+ */
+
+.footer { background:var(--footer);color:#fff;margin-top:85px;padding:34px 0 0 }
+
+.footer-top { border:1px solid var(--footer-line);background:var(--footer-top);border-radius:15px;padding:14px 20px;display:flex;align-items:center;justify-content:space-between }
+
+.ft-connect { display:flex;gap:12px }
+
+.ft-contact { display:flex;align-items:center;gap:8px;border:1px solid var(--footer-line);border-radius:9px;padding:8px 10px;min-width:165px }
+
+.ft-icon { width:33px;height:33px;display:grid;place-items:center;border-radius:8px;background:#ffffff18 }
+
+.ft-contact small,.ft-contact strong { display:block }
+
+.ft-contact small { font-size:9px;color:var(--footsoft) }
+
+.ft-contact strong { font:700 11px Arad }
+
+.ft-highlight { background:var(--newsletter) }
+
+.to-top { border:1px solid var(--footer-line);border-radius:8px;padding:10px 12px;display:flex;gap:8px;align-items:center;font:700 10px Arad }
+
+.footer-services { display:grid;grid-template-columns:repeat(4,1fr);padding:28px 0;border-bottom:1px solid var(--footer-line) }
+
+.footer-services .service+.service { border-color:var(--footer-line) }
+
+.footer-services .service-icon { background:#ffffff14;color:#fff }
+
+.footer-services .service strong { font-size:11px }
+
+.footer-services .service small { color:var(--footsoft);font-size:10px }
+
+.footer-grid { display:grid;grid-template-columns:repeat(4,1fr) 2fr;gap:18px;padding:36px 0 38px }
+
+.footer-column h4,.newsletter h4 { font:700 13px Arad;margin-bottom:17px }
+
+.footer-column h4:after { content:'';display:block;width:25px;height:2px;margin-top:9px;background:var(--accent-2) }
+
+.footer-column>span { display:block;margin:9px 0;font-size:11px;color:var(--footsoft) }
+
+.newsletter { background:var(--newsletter);border-radius:14px;padding:20px 22px;position:relative;min-height:215px }
+
+.newsletter-symbol { float:left;width:36px;height:36px;border-radius:9px;background:#ffffff1c;display:grid;place-items:center }
+
+.newsletter h4 { font-size:14px;margin-bottom:5px }
+
+.newsletter p { color:var(--footsoft);font-size:11px;line-height:2 }
+
+.news-input { display:flex;align-items:center;justify-content:space-between;background:#fff;border-radius:8px;padding:4px 5px 4px 4px;margin-top:14px;color:#aaa2a8;font-size:10px }
+
+.news-input>span { padding:0 9px }
+
+.news-input button { background:var(--cta);color:var(--cta-ink);border-radius:6px;padding:8px 14px;font:700 10px Arad }
+
+.social-title { border-top:1px solid #ffffff35;margin-top:13px;padding-top:11px;font:700 10px Arad }
+
+.socials { display:flex;gap:8px;margin-top:8px }
+
+.socials span { border:1px solid #ffffff3d;border-radius:7px;display:flex;align-items:center;gap:7px;padding:6px 10px;font-size:10px }
+
+.footer-about { border-top:1px solid var(--footer-line);border-bottom:1px solid var(--footer-line);padding:24px 0;display:flex;align-items:center;justify-content:space-between;gap:40px }
+
+.footer-about strong { font:700 12px Arad }
+
+.footer-about p { max-width:600px;font-size:11px;color:var(--footsoft);line-height:2.2;margin-top:6px }
+
+.seals { display:flex;gap:9px }
+
+.seals>div { width:71px;height:71px;border-radius:10px;background:#fff;color:var(--accent);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px }
+
+.seals span { font:500 8px Arad }
+
+.footer-bottom { display:flex;align-items:center;justify-content:space-between;padding:18px 0;color:var(--footsoft);font-size:10px }
+
+.footer-bottom span { display:flex;align-items:center;gap:6px }
+
+.royal .footer .newsletter { border:1px solid #637083 }
+
+.organic .footer { background:#344034 }
+
+.site-credit { display:inline-flex;align-items:center;gap:8px;color:var(--accent);text-decoration:none;font:700 10px Arad;white-space:nowrap;direction:rtl }
+
+.site-credit span { display:inline!important;line-height:1.9 }
+
+.site-credit strong { font-weight:700 }
+
+.site-credit bdi { display:inline-block;direction:ltr;font:500 10px Arad;opacity:.85 }
+
+.footer .site-credit { color:#fff }
+
+.footer-bottom { gap:15px }
+
+.detail-page+.footer { margin-top:70px }
+
+.app-footer { border-top:1px solid var(--line);margin-top:18px;padding:18px 0 28px;display:flex;justify-content:space-between;gap:10px;color:var(--muted);font-size:9px }
+
+.app-footer b { padding:0 7px }
+
+.newsletter-light { margin-top:55px;border-radius:13px;background:var(--soft);padding:25px;display:flex;justify-content:space-between;gap:20px;align-items:center }
+
+.newsletter-light>div:first-child { display:flex;align-items:center;gap:12px;color:var(--accent) }
+
+.newsletter-light strong { font:700 12px Arad }
+
+.newsletter-light p { font-size:10px;color:var(--muted);margin-top:5px }
+
+.newsletter-placeholder { background:var(--paper);border-radius:8px;color:var(--muted);font-size:10px;padding:6px 10px;min-width:265px;display:flex;justify-content:space-between;align-items:center }
+
+.newsletter-placeholder span { font:700 10px Arad;background:var(--accent);color:#fff;padding:8px 12px;border-radius:6px }
+
+.checkout-footer { margin-top:60px;border-top:1px solid var(--line);color:var(--muted) }
+
+.checkout-footer>.container { padding:20px 0 27px;display:flex;justify-content:space-between;gap:10px;font-size:10px }
+
+.checkout-footer b { padding:0 6px }
+
+
+@media(max-width:650px) {
+	.footer { margin-top:52px;padding-top:20px;padding-bottom:68px }
+	.footer-top { display:grid;grid-template-columns:1fr auto;gap:13px;padding:12px;border-radius:10px }
+	.to-top { font-size:9px;padding:7px }
+	.ft-connect { grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:7px }
+	.ft-contact { min-width:0;padding:7px;gap:6px }
+	.ft-icon { width:29px;height:29px }
+	.ft-icon svg { width:16px }
+	.ft-contact small { font-size:8px }
+	.ft-contact strong { font-size:9px }
+	.footer-services { grid-template-columns:repeat(2,1fr);gap:16px 4px;padding:20px 0 }
+	.footer-services .service+.service { border:0;padding-right:0 }
+	.footer-services .service strong { font-size:10px }
+	.footer-services .service small { font-size:9px }
+	.footer-grid { grid-template-columns:repeat(2,1fr);gap:21px 12px;padding:25px 0 }
+	.footer-column h4 { font-size:11px;margin-bottom:10px }
+	.footer-column>span { font-size:10px;margin:7px 0 }
+	.newsletter { grid-column:1/-1;padding:18px 19px;min-height:0 }
+	.newsletter h4 { font-size:12px }
+	.newsletter p { font-size:10px }
+	.footer-about { flex-direction:column;align-items:flex-start;gap:15px;padding:19px 0 }
+	.footer-about strong { font-size:11px }
+	.footer-about p { font-size:10px }
+	.seals>div { width:60px;height:60px }
+	.footer-bottom { font-size:9px }
+	.footer-bottom { flex-wrap:wrap;row-gap:10px }
+	.footer-bottom .site-credit { flex-basis:100%;font-size:10px }
+	.site-credit bdi { font-size:10px }
+	.detail-page+.footer { margin-top:47px }
+	.app-footer { flex-direction:column;gap:6px;padding-bottom:85px;font-size:9px }
+	.newsletter-light { margin-top:35px;padding:17px;align-items:flex-start;flex-direction:column }
+	.newsletter-placeholder { width:100%;min-width:0 }
+	.checkout-footer { margin-top:38px;padding-bottom:65px }
+	.checkout-footer>.container { flex-direction:column;gap:6px;padding:17px 0 }
+}

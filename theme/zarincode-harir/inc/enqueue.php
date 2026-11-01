@@ -73,7 +73,8 @@ function zch_enqueue_styles() {
 		'zch-components'  => [ 'components.css', [ 'zch-base' ] ],
 		'zch-header'      => [ 'header.css', [ 'zch-base' ] ],
 		'zch-footer'      => [ 'footer.css', [ 'zch-base' ] ],
-		'zch-a11y'        => [ 'a11y.css', [ 'zch-base' ] ],
+		'zch-content'     => [ 'content.css', [ 'zch-base' ] ],
+		'zch-themes'      => [ 'themes.css', [ 'zch-base' ] ],
 	];
 
 	// ووکامرس فقط در صفحات فروشگاهی.
@@ -94,8 +95,13 @@ function zch_enqueue_styles() {
 		wp_enqueue_style( $handle, ZCH_THEME_URI . '/assets/css/' . $file[0], $file[1], $debug ? (string) filemtime( ZCH_THEME_DIR . '/assets/css/' . $file[0] ) : $version );
 	}
 
+	// لایهٔ سازگاری با وردپرس — باید آخر از همه بارگذاری شود.
+	if ( file_exists( ZCH_THEME_DIR . '/assets/css/wp-compat.css' ) ) {
+		wp_enqueue_style( 'zch-wp-compat', ZCH_THEME_URI . '/assets/css/wp-compat.css', [ 'zch-base' ], $debug ? (string) filemtime( ZCH_THEME_DIR . '/assets/css/wp-compat.css' ) : $version );
+	}
+
 	// برگهٔ اصلی style.css برای سازگاری با Child Theme و Theme-Check.
-	wp_enqueue_style( 'zch-theme', get_stylesheet_uri(), [], $version );
+	wp_enqueue_style( 'zch-theme', get_stylesheet_uri(), [ 'zch-wp-compat' ], $version );
 
 	// Child Theme.
 	if ( is_child_theme() ) {
