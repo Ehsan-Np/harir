@@ -1,0 +1,119 @@
+/**
+ * توکن‌های طراحی حریر رویا — استخراج مستقیم از کلاس `.dream` در منبع HTML.
+ *
+ * این مقادیر ۱:۱ با Elementor Global Colors در Site Settings نگاشت می‌شوند
+ * تا هر تغییری در المنتور، همین متغیرها را به‌روزرسانی کند.
+ */
+
+:root,
+body.dream {
+	/* سطح‌ها */
+	--zch-bg: #fbf9f7;
+	--zch-paper: #ffffff;
+	--zch-soft: #f4e7eb;
+	--zch-soft-2: #e9d8df;
+
+	/* جوهر */
+	--zch-ink: #3b2935;
+	--zch-muted: #6b5963;
+	--zch-line: #eee5e7;
+
+	/* برند */
+	--zch-accent: #59354e;
+	--zch-accent-2: #cda7b7;
+	--zch-cta: #59354e;
+	--zch-cta-ink: #ffffff;
+	--zch-gold: #b48d78;
+
+	/* فوتر */
+	--zch-footer: #30232e;
+	--zch-footer-top: #3f303c;
+	--zch-footer-line: #665462;
+	--zch-footer-soft: #d8cbd2;
+	--zch-newsletter: #65475e;
+
+	/* تم اختصاصی بخش عمده */
+	--zch-wholesale-bg: #e9dce2;
+	--zch-wholesale-ink: #3e2939;
+
+	/* تایپوگرافی */
+	--zch-font-body: "Arad", "Vazirmatn", Tahoma, sans-serif;
+	--zch-font-latin: "Ario", "Helvetica Neue", Arial, sans-serif;
+	--zch-fs-body: 13px;
+	--zch-fs-h1: 49px;
+	--zch-fs-h2: 26px;
+	--zch-fs-h3: 14px;
+	--zch-lh-h1: 1.38;
+	--zch-lh-h2: 1.6;
+
+	/* فاصله و شکل */
+	--zch-container-max: 1280px;
+	--zch-container-gutter: 64px;
+	--zch-container-gutter-mobile: 18px;
+	--zch-radius: 8px;
+	--zch-radius-lg: 16px;
+	--zch-btn-height: 48px;
+	--zch-btn-height-sm: 43px;
+	--zch-border: 1px solid var(--zch-line);
+	--zch-shadow-sm: 0 1px 2px rgb(59 41 53 / 6%);
+	--zch-shadow-md: 0 6px 24px rgb(59 41 53 / 8%);
+	--zch-shadow-lg: 0 18px 48px rgb(59 41 53 / 12%);
+	--zch-transition: 220ms cubic-bezier(0.4, 0, 0.2, 1);
+
+	/* z-index */
+	--zch-z-topline: 40;
+	--zch-z-header: 60;
+	--zch-z-mobile-bar: 70;
+	--zch-z-drawer: 90;
+	--zch-z-modal: 120;
+	--zch-z-toast: 140;
+}
+
+/* نگاشت نام‌های کوتاه اصلی طرح به توکن‌های جدید، برای سازگاری با CSS منبع. */
+body.dream {
+	--bg: var(--zch-bg);
+	--paper: var(--zch-paper);
+	--ink: var(--zch-ink);
+	--muted: var(--zch-muted);
+	--line: var(--zch-line);
+	--accent: var(--zch-accent);
+	--accent-2: var(--zch-accent-2);
+	--cta: var(--zch-cta);
+	--cta-ink: var(--zch-cta-ink);
+	--soft: var(--zch-soft);
+	--soft2: var(--zch-soft-2);
+	--footer: var(--zch-footer);
+	--footer-top: var(--zch-footer-top);
+	--footer-line: var(--zch-footer-line);
+	--footsoft: var(--zch-footer-soft);
+	--newsletter: var(--zch-newsletter);
+	--whbg: var(--zch-wholesale-bg);
+	--whink: var(--zch-wholesale-ink);
+	--gold: var(--zch-gold);
+}
+
+@media (max-width: 1024px) {
+	:root,
+	body.dream {
+		--zch-fs-h1: 47px;
+		--zch-container-gutter: 32px;
+	}
+}
+
+@media (max-width: 650px) {
+	:root,
+	body.dream {
+		--zch-fs-h1: 31px;
+		--zch-lh-h1: 1.45;
+		--zch-fs-h2: 21px;
+		--zch-container-gutter: var(--zch-container-gutter-mobile);
+		--zch-btn-height: var(--zch-btn-height-sm);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	:root,
+	body.dream {
+		--zch-transition: 1ms linear;
+	}
+}

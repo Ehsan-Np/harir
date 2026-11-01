@@ -1,0 +1,22 @@
+/*
+Theme Name:        حریر رویا
+Theme URI:         https://zarincode.com/harir-roya
+Author:            احسان نادری پناه
+Author URI:        https://zarincode.com/
+Description:       قالب فروشگاهی کاملاً المنتوری، راست‌چین و فارسی برای کالای خواب؛ با هستهٔ اختصاصی قیمت‌گذاری عمده، پنل کاربری دومنظوره و احراز هویت پیامکی. ساخته‌شده بر پایهٔ استانداردهای ThemeForest و ووکامرس نوین (HPOS).
+Version:           1.0.0
+Requires at least: 6.0
+Tested up to:      6.7
+Requires PHP:      7.4
+License:           GNU General Public License v2 or later
+License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain:       zarincode-harir
+Domain Path:       /languages
+Tags:              e-commerce, right-to-left, one-column, two-columns, custom-menu, custom-logo, featured-images, full-width-template, rtl-language-support, theme-options, translation-ready, woocommerce, block-styles, wide-blocks
+*/
+
+/*
+ * این فایل عمداً فقط سربرگ قالب را نگه می‌دارد.
+ * همهٔ استایل‌ها در assets/css/ قرار دارند و با wp_enqueue_style بارگذاری
+ * می‌شوند (الزام ThemeForest). توکن‌های طراحی در assets/css/tokens.css است.
+ */
